@@ -1,0 +1,20 @@
+[package]
+name = "template-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+mimalloc = "*"
+regex = "*"
+
+[build-dependencies]
+winresource = "*"
+
+[profile.release]
+# Uncomment to enable zero optimization (slower but smaller binary)
+# opt-level = "z"
+opt-level = 3
+strip = true
+lto = true
+panic = "abort"
+codegen-units = 1
