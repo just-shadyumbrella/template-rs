@@ -3,7 +3,9 @@ use std::fs;
 #[cfg(windows)]
 fn main() -> std::io::Result<()> {
     let app_icon = "app.ico";
+    // let app_icon = "";
     let manifest = "app.manifest";
+    let manifest = "";
 
     let mut res = winresource::WindowsResource::new();
     let icon_is_file = fs::metadata(app_icon).map(|m| m.is_file()).unwrap_or(false);
