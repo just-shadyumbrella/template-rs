@@ -1,0 +1,29 @@
+name: Run
+on:
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  run:
+    runs-on: windows-latest
+    steps:
+        - uses: actions/checkout@v4
+
+        - name: Install Rust toolchain
+          uses: dtolnay/rust-toolchain@stable
+
+        - name: Configure MSVC
+          uses: ilammy/msvc-dev-cmd@v1
+          with:
+            arch: x64
+
+        - name: Rust Cache
+          uses: swatinem/rust-cache@v2
+
+        - name: Run Debug
+          run: cargo run --verbose
+
+        - name: Run Release
+          run: cargo run --release
