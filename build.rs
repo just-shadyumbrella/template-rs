@@ -3,15 +3,19 @@ use std::fs;
 #[cfg(windows)]
 fn main() -> std::io::Result<()> {
     // Fix this if you want to use a custom icon or manifest
-    let app_icon = ".app.ico";
-    let manifest = ".app.manifest";
+    let app_icon = "app.ico";
+    let manifest = "app.manifest";
 
     let mut res = winresource::WindowsResource::new();
-    let icon_is_file = fs::metadata(app_icon).map(|m| m.is_file()).unwrap_or_else(|_| false);
+    let icon_is_file = fs::metadata(app_icon)
+        .map(|m| m.is_file())
+        .unwrap_or_else(|_| false);
     if icon_is_file {
         res.set_icon(app_icon);
     }
-    let manifest_is_file = fs::metadata(manifest).map(|m| m.is_file()).unwrap_or_else(|_| false);
+    let manifest_is_file = fs::metadata(manifest)
+        .map(|m| m.is_file())
+        .unwrap_or_else(|_| false);
     if manifest_is_file {
         res.set_manifest_file(manifest);
     }

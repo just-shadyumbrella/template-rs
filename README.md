@@ -1,4 +1,4 @@
-# My Rust Template Project (Windows centric)
+# My Personal Rust Template Project (Windows centric)
 
 ## Prerequisites:
 - Microsoft Visual C++ (MSVC) Build Tools 18
@@ -32,4 +32,14 @@ cargo build
 cargo build -r
 ```
 
+## Materials
+- [Blessed.rs](https://blessed.rs): library to get started.
+- [Comprehensive Rust](https://google.github.io/comprehensive-rust) by Google.
+- [Lib.rs](https://lib.rs): find your Rust crates.
+
+---
+
+<div align="center">
+
 This project was created using [`cargo init`](https://doc.rust-lang.org/cargo/commands/cargo-init.html) in Rust 2024. [**Rust**](https://www.rust-lang.org) is a blazingly fast and memory-efficient low-level programming language.
+</div>

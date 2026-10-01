@@ -6,7 +6,13 @@ edition = "2024"
 [dependencies]
 const_format = "*"
 mimalloc = "*"
-regex = "*"
+# rayon = "*"
+# natord = "*"
+# regex = "*"
+# sonic-rs = "*"
+# owo-colors = "*"
+# hide_console = "*"
+# which = "*"
 
 [build-dependencies]
 winresource = "*"
